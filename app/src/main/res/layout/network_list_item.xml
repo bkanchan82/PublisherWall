@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    card_view:cardBackgroundColor="@color/colorCard"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="1dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tv_network_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:text="OGADs"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/l_pay_frequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/tv_network_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_network_name">
+
+                <TextView
+                    android:id="@+id/tv_pay_frequency_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="Payment Frequency : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_pay_frequency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="Weekly, Net 30" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_min_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="$50"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/l_pay_frequency"
+                app:layout_constraintTop_toBottomOf="@+id/l_pay_frequency" />
+
+            <LinearLayout
+                android:id="@+id/l_commission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/tv_min_pay"
+                app:layout_constraintTop_toBottomOf="@+id/tv_min_pay">
+
+                <TextView
+                    android:id="@+id/iv_commission_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="Commision Type : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/iv_commission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="Commision Type : CPA, CPL, CPI" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/l_offers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/l_commission"
+                app:layout_constraintTop_toBottomOf="@+id/l_commission">
+
+
+                <TextView
+                    android:id="@+id/iv_offers_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="Offers : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/iv_offers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="Offers : 50" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/iv_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_favorite_red_24dp"
+                android:drawablePadding="8dp"
+                android:text="25"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/l_offers"
+                app:layout_constraintTop_toBottomOf="@+id/l_offers" />
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                card_view:srcCompat="@drawable/side_nav_bar" />
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/bt_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:textAllCaps="true"
+            android:text="Get Account"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

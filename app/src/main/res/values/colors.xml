@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e67714</color>
+    <color name="colorPrimaryDark">#c95b26</color>
+    <color name="colorPrimaryLight">#f9c6ae</color>
+    <color name="colorAccent">#7ebe69</color>
+    <color name="colorAccentDark">#397825</color>
+    <color name="colorAccentDarker">#20560e</color>
+
+    <color name="colorCard">#ffffff</color>
+    <color name="white">#ffffff</color>
+
+    <color name="state_pressed">#d7d7d7</color>
+    <color name="state_focused">#d6e2e6</color>
+    <color name="default_state">#FAFAFA</color>
+
+
+
+
+
+
+</resources>

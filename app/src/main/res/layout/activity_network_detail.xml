@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NetworkDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_main_done"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            app:layout_editor_absoluteX="0dp"
+            app:layout_editor_absoluteY="80dp"
+            tools:context=".NetworkDetailActivity"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="80dp">
+
+            <ImageView
+                android:id="@+id/iv_network_big_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="end"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_network_big_image">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/action_join_network"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_join_96dp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/action_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_share_96dp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/action_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_favorite_border_96dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/like_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="right"
+                android:paddingRight="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+
+                <TextView
+                    android:id="@+id/likeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Likes"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/favoriteCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/contactLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/like_layout">
+
+                <TextView
+                    android:id="@+id/tv_network_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone No : N/A"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email :  info@ogads.com"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <TableLayout
+                android:id="@+id/table_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contactLayout">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fcf8e3"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/no_of_offers_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:text="Number of offers"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_no_of_offers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="2"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:text="N/A" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/commission_type_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:text="Commission Type"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_commission_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="2"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:text="CPA, CPL, CPI, CPS" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fcf8e3"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/minmum_payment_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:text="Minimum Payment"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_minimum_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="2"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:text="$50" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/payment_frequency_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:text="Payment Frequency"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_payment_frequency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="2"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:text="Weekly, Net-30" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fcf8e3"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/payment_method_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:text="Payment Method"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_payment_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="2"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:text="Paypal, Payoneer, Wire, Check, ACH" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/reffer_commission_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:text="Referral Commission"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_referal_commission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="2"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:text="5%" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fcf8e3"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tracking_soft_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:text="Tracking Software"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_tracking_soft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="2"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:text="In-house proprietary platform and Custom content locking" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tracking_link_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:text="Tracking Link"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_tracking_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="2"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+                        android:text="N/A" />
+
+                </TableRow>
+
+            </TableLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/aff_manager_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/table_view">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/affiliateManagerLable"
+                    android:padding="8dp"
+                    android:textSize="20sp"
+                    android:text="Affiliate Managers"
+                    android:drawablePadding="16dp"
+                    android:background="@drawable/expand_touch_selector"
+                    android:drawableEnd="@drawable/ic_expand_more_24dp"
+                    android:drawableRight="@drawable/ic_expand_more_24dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/manager_detail_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aff_manager_layout"
+                card_view:cardBackgroundColor="@color/colorCard"
+                card_view:cardCornerRadius="3dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/description_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:text="Description"
+                        android:textSize="22sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/table_view" />
+
+                    <TextView
+                        android:id="@+id/tv_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:text="The #1 Mobile Desktop Content Locking Network, OGads provides the top mobile content locker in the industry. Exclusive high paying apps, exclusive cpa, pin submits and weekly burst campaigns are a norm for our mobile + desktop content locker. Our content locker is the go to tool for top social media publishers in OGads. If you promote on Instagram, Vine, Twitter, or any other social media site watch your earnings soar with OGads." />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/network_loading_pb"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_display_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/error_message"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+</FrameLayout>

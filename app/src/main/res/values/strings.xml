@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">PublisherWall</string>
+
+    <!--<string name="google_api_key">AIzaSyBMAxpRe-fd2N40agRn14ZNwlmVdfmRJQI</string>-->
+    <string name="google_web_token_id">1032718132707-nbrj4i0hp5vidmlm63165ttsbhbme9ed.apps.googleusercontent.com</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Nav menu-->
+    <string name="nav_networks">Networks</string>
+    <string name="nav_events">Events</string>
+    <string name="nav_favorite_networks">Favorite Networks</string>
+    <string name="nav_bye_email_data">Bye Email Data</string>
+    <string name="nav_tools">PubTools</string>
+
+    <string name="error_message">
+        An error has occurred. Please check your network connectivity.
+    </string>
+
+    <string name="network_error_message">
+        No internet. Please check your network connectivity.
+    </string>
+
+    <string name="no_favorite_network_message">
+        No Favorite Network Exists
+    </string>
+
+    <!--Credential Preference String constant-->
+    <string name="preference_file_credential" translatable="false">com.publisherwall.android.publisherwall.credential</string>
+    <string name="pref_email_key" translatable="false">email_key</string>
+    <string name="pref_user_name_key" translatable="false">user_name_key</string>
+    <string name="pref_profile_pic_url_key" translatable="false">profile_pic_url_key</string>
+    <string name="pref_is_signed_in" translatable="false">is_signed_id</string>
+    <string name="pref_last_sync_time" translatable="false">last_sync_time</string>
+    <string name="pref_last_event_sync_time" translatable="false">last_event_sync_time</string>
+    <string name="pref_fcm_registration_token" translatable="false">fcm_registration_token</string>
+    <string name="pref_is_fcm_token_shared"  translatable="false">is_fcm_token_shared</string>
+    <string name="pref_app_current_version_on_server" translatable="false">current_version</string>
+    <string name="pref_current_version_update_time" translatable="false">current_version_update_time</string>
+    <string name="pref_is_update_must_required" translatable="false">is_update_must_required</string>
+
+
+    <!--Formatted Strings for complete network detail activity-->
+    <string name="network_contact_no">Phone No : %1$s</string>
+    <string name="network_email">Email : %1$s</string>
+    <string name="iv_offers">Offers : %1$s</string>
+    <string name="iv_commission">Commission : %1$s</string>
+    <string name="tv_pay_frequency">Payment Frequency : %1$s</string>
+    <string name="tv_min_pay">$%1$s</string>
+
+
+    <!--Fragments Title-->
+    <string name="network_list">Networks</string>
+    <string name="favorite_network_list">Favorite Networks</string>
+    <string name="event_detail_activity">Event</string>
+    <string name="event_list">Events</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="poster_content_description">Event Poster</string>
+
+    <string name="aff_manager_aim">AIM : %1$s</string>
+    <string name="aff_manager_skype_id">Skype : %1$s</string>
+
+
+    <!--Notification string constent-->
+    <string name="network_notification_channel_id" translatable="false">network_notification_channel_id</string>
+    <string name="network_notification_channel_name">Network</string>
+    <string name="network_notification_channel_description">To be notified about new network</string>
+
+    <string name="event_notification_channel_id" translatable="false">event_notification_channel_id</string>
+    <string name="event_notification_channel_title">New Event</string>
+    <string name="event_reminder_notification_title">Event Reminder</string>
+    <string name="event_notification_channel_description">To be notified about liked and new event</string>
+    <string name="event_notification_content_format">%1$s held on %2$s at %3$s</string>
+
+</resources>
